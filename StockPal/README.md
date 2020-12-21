@@ -4,7 +4,7 @@ This application returns a candlestick chart of the requested stock ticker symbo
 
 ## Features
     *Powered by the Yahoo Finance API
-    *Candlestick chart also provides information on the trading volume and moving averages
+    *Candlestick chart provides information on the trading volume and moving averages
     *Chart can be saved in different formats such as png, jpeg, pdf, and tif
 
 ## Prerequisites
