@@ -85,10 +85,12 @@ convert_btn = ttk.Button(frame3, text='Convert')
 convert_btn.grid(row=0, column=0, padx=(0, 20))
 convert_btn.bind('<Button-1>', convert)
 convert_btn.bind('<Return>', convert)
+convert_btn.bind('<KP_Enter>', convert)
 
 clear_btn = ttk.Button(frame3, text='Clear')
 clear_btn.grid(row=0, column=1)
 clear_btn.bind('<Button-1>', clear)
 clear_btn.bind('<Return>', clear)
+clear_btn.bind('<KP_Enter>', clear)
 
 root.mainloop()
