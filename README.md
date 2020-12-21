@@ -1,6 +1,6 @@
 # GUI Apps
 
-This repository contains python scripts for applications with a graphical user interface (GUI).  Although the screenshots of the applications were taken on a Mac, Windows could also run the scripts unless otherwise noted.
+This repository contains python scripts for applications with a graphical user interface (GUI).  Although the example screenshots of the applications were taken on a Mac, Windows or Linux could also run the scripts unless otherwise noted.
 
 ## Prerequisites
 
