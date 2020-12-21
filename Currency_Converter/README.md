@@ -14,5 +14,5 @@ Required python modules:
     *forex_python
     *tkinter
   
-## Example
+## Screenshot
 ![Image](Screenshot.png)
