@@ -26,7 +26,8 @@ def about():
     global img_about
     top = tk.Toplevel()
     top.title('About StockPal')
-    top.geometry('850x220')
+    top.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
+    top.resizable(width=False, height=False)
     img_about = tk.PhotoImage(file='About.png')
     img_label = tk.Label(top, image=img_about)
     img_label.pack()
@@ -57,12 +58,16 @@ def grapher(event):
         toolbarFrame.pack()
         toolbar = NavigationToolbar2Tk(canvas, toolbarFrame)
 
-
-
-
     except Exception as e:
         status_label.config(text=e)
         top.destroy()
+
+
+def clear(event):
+    ticker_entry.delete(0, 'end')
+    start_entry.delete(0, 'end')
+    end_entry.delete(0, 'end')
+    status_label.config(text='')
 
 
 root = tk.Tk()
@@ -118,13 +123,21 @@ end_lbl.grid(row=0, column=3)
 end_entry = ttk.Entry(frame, textvariable=stringvar3, font=('helvetica', 20))
 end_entry.grid(row=1, column=3)
 
-s = ttk.Style()
-s.configure('submit.TButton', font=('Arial', 16))
-submit_btn = ttk.Button(root, text='Submit', state='disabled', style='submit.TButton')
-submit_btn.pack(pady=20, ipadx=10, ipady=8)
+btn_frame = tk.Frame(root, bg='#2E8B57')
+btn_frame.pack(pady=20)
+font=('Arial', 16)
+
+submit_btn = tk.Button(btn_frame, text='Submit', state='disabled', font=font)
+submit_btn.grid(row=0, column=0, ipadx=20, ipady=7, padx=(0, 50))
 submit_btn.bind('<Return>', grapher)
 submit_btn.bind('<KP_Enter>', grapher)
 submit_btn.bind('<Button-1>', grapher)
+
+clear_btn = tk.Button(btn_frame, text='Clear', font=font)
+clear_btn.grid(row=0, column=1, ipadx=25, ipady=7)
+clear_btn.bind('<Return>', clear)
+clear_btn.bind('<KP_Enter>', clear)
+clear_btn.bind('<Button-1>', clear)
 
 status_label = tk.Label(root, text='', bd=1, relief='groove', anchor='e', fg='#FF3333', bg='#E9E9E9')
 status_label.pack(fill='x', side='bottom', ipady=2)
