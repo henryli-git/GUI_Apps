@@ -18,6 +18,6 @@ Required python modules:
     *mplfinance
     *tkinter
   
-## Example
+## Screenshots
 ![Image](Screenshots_of_App/Screenshot_1.png)
 ![Image](Screenshots_of_App/Screenshot_2.png)
