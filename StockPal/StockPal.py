@@ -105,7 +105,7 @@ def grapher(event):
         fig, ax = mpf.plot(stock_data, type='candle', mav=(20, 50), volume=True, title=f"{ticker.upper()}",
                            style='yahoo', returnfig=True, figsize=(16, 9))
 
-        ax[0].legend(('20 MA', '50 MA'), loc=(1, 1))
+        ax[0].legend(('20 MA', '50 MA'), loc=(1, 1.05))
         ax[0].xaxis.set_major_locator(MultipleLocator(14))
 
         canvas = FigureCanvasTkAgg(fig, top)
