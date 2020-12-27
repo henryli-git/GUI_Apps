@@ -1,6 +1,6 @@
 # StockPal
 
-This application retrieves current stock information from Yahoo finance.  The application can also return the ticker's candlestick chart based on the desired time interval.
+This application retrieves current stock information from Yahoo finance.  The application can also return the ticker's candlestick chart based on a desired time interval.
 
 ## Features
     *Powered by the Yahoo Finance API
