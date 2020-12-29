@@ -128,7 +128,12 @@ def clear(event):
     info_box.config(state='normal')
     info_box.delete(1.0, 'end')
     info_box.config(state='disabled')
+
     file_menu.entryconfig('Save            ⌘S', state='disabled')
+
+    info_btn.config(state='disabled')
+    chart_btn.config(state='disabled')
+    save_btn.config(state='disabled')
 
     status_label.config(text='')
 
@@ -194,23 +199,20 @@ btn_frame = tk.Frame(root, bg='#2E8B57')
 btn_frame.pack(pady=20)
 font = ('Arial', 16)
 
-info_btn = tk.Button(btn_frame, text='Current Info', state='disabled', font=font)
+info_btn = tk.Button(btn_frame, text='Current Info', state='disabled', font=font, command=lambda: info('event'))
 info_btn.grid(row=0, column=0, ipadx=5, ipady=7, padx=(0, 20))
 info_btn.bind('<Return>', info)
 info_btn.bind('<KP_Enter>', info)
-info_btn.bind('<Button-1>', info)
 
-chart_btn = tk.Button(btn_frame, text='Chart', state='disabled', font=font)
+chart_btn = tk.Button(btn_frame, text='Chart', state='disabled', font=font, command=lambda: grapher('event'))
 chart_btn.grid(row=0, column=1, ipadx=20, ipady=7, padx=(0, 20))
 chart_btn.bind('<Return>', grapher)
 chart_btn.bind('<KP_Enter>', grapher)
-chart_btn.bind('<Button-1>', grapher)
 
-clear_btn = tk.Button(btn_frame, text='Clear', font=font)
+clear_btn = tk.Button(btn_frame, text='Clear', font=font, command=lambda: clear('event'))
 clear_btn.grid(row=0, column=2, ipadx=25, ipady=7)
 clear_btn.bind('<Return>', clear)
 clear_btn.bind('<KP_Enter>', clear)
-clear_btn.bind('<Button-1>', clear)
 
 scroll_bar_frame = tk.Frame(root)
 scroll_bar = tk.Scrollbar(scroll_bar_frame, orient='vertical')
@@ -221,11 +223,10 @@ scroll_bar.pack(side='right', fill='y')
 scroll_bar_frame.pack()
 info_box.pack(pady=20)
 
-save_btn = tk.Button(root, text='Save', state='disabled', font=font)
+save_btn = tk.Button(root, text='Save', state='disabled', font=font, command=lambda: save('event'))
 save_btn.pack(pady=20, ipadx=25, ipady=7, )
 save_btn.bind('<Return>', save)
 save_btn.bind('<KP_Enter>', save)
-save_btn.bind('<Button-1>', save)
 
 status_label = tk.Label(root, text='', bd=1, relief='groove', anchor='e', fg='#FF3333', bg='#E9E9E9')
 status_label.pack(fill='x', side='bottom', ipady=2)
