@@ -52,7 +52,7 @@ def clear(e):
 
 menu_bar = tk.Menu(root)
 root.config(menu=menu_bar)
-file_menu = tk.Menu(menu_bar)
+file_menu = tk.Menu(menu_bar, tearoff=False)
 menu_bar.add_cascade(menu=file_menu, label='File')
 file_menu.add_command(label='Quit             ⌘Q', command=root.quit)
 
