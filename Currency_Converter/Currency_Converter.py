@@ -50,6 +50,12 @@ def clear(e):
     to_amount_label.config(text='')
 
 
+menu_bar = tk.Menu(root)
+root.config(menu=menu_bar)
+file_menu = tk.Menu(menu_bar)
+menu_bar.add_cascade(menu=file_menu, label='File')
+file_menu.add_command(label='Quit             ⌘Q', command=root.quit)
+
 font = ('arial', 15)
 
 frame1 = tk.Frame(root)
