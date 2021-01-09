@@ -15,5 +15,4 @@ Required python modules:
     *tkinter
   
 ## Screenshot
-widgets
 ![Image](Screenshot.png)
