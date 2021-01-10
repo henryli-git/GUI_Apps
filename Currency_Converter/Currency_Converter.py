@@ -18,8 +18,8 @@ root.title('Currency Converter')
 currencies = ['', 'USD', 'CAD', 'MXN', 'PHP', 'CNY', 'JPY', 'THB', 'MYR', 'IDR', 'INR', 'DKK', 'EUR', 'BGN', 'CZK',
               'BRL']
 
-variable1 = tk.StringVar(root)
-variable2 = tk.StringVar(root)
+variable1 = tk.StringVar()
+variable2 = tk.StringVar()
 
 
 def convert(e):
