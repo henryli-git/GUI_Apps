@@ -10,7 +10,7 @@ This application retrieves current stock information from Yahoo finance.  The ap
     
 
 ## Prerequisites
-Python 3.6 or later is required.  The StockPal.png and About.png files included in this folder must also be downloaded for the application to function properly.
+Python 3.6 or later is required.  The StockPal.png and About.png files included in this folder must also be downloaded and placed in the same directory of this script.
 
 Required python modules:
 
