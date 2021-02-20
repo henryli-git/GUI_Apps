@@ -9,9 +9,9 @@ This application reads pdf files aloud.
     *Volume adjustment
     
     Pyttsx3 engine limitations: 
-    *no adjustments can be made once speech is initiated
-    *no pause and resume functionality - file would be read from the beginning when stopped
-    *pdf files formatted into multiple columns may not be supported
+    *Adjustments cannot be made once speech is initiated
+    *Speech cannot be paused and resumed—file would be read from the beginning when stopped
+    *Pdf files formatted into multiple columns may not be supported
     
    
 
@@ -33,5 +33,7 @@ This application reads pdf files aloud.
      
 ## Screenshots
 ![Image](Screenshots_of_App/Screenshot_1.png)
+<br/><br/><br/><br/>
 ![Image](Screenshots_of_App/Screenshot_2.png)
+<br/><br/><br/><br/>
 ![Image](Screenshots_of_App/Screenshot_3.png)
