@@ -1,6 +1,5 @@
 import multiprocessing
 import os
-import psutil
 import PyPDF2
 import pyttsx3
 import tkinter as tk
@@ -47,7 +46,6 @@ def stop(event):
 
 def play(event):
     global task
-
     start = int(start_entry.get())
     end = int(end_entry.get())
     if end < start:
@@ -55,7 +53,6 @@ def play(event):
         return
 
     try:
-        pid = os.getpid()
         voice = voices[variable1.get()]
         rate = rate_scale.get()
         volume = volume_scale.get()
@@ -63,11 +60,9 @@ def play(event):
         task = multiprocessing.Process(target=message, args=(start, end, voice, rate, volume, file))
         task.daemon = True
         task.start()
-        p = psutil.Process(task.pid)
 
         if file:
             status_label.config(text=f'Playing - {filename}', fg='#90EE90')
-
             play_lbl.grid_forget()
             stop_lbl.grid(row=0, column=0, padx=5)
             file_menu.entryconfig('Open...    ⌘O', state='disabled')
@@ -80,7 +75,6 @@ def play(event):
 
         else:
             status_label.config(text='No file was opened', fg='#FF4E0D')
-
 
     except ValueError:
         status_label.config(text='Please input a page range', fg='#FF4E0D')
@@ -99,14 +93,14 @@ def message(start, end, voice, rate, volume, file):
     engine.setProperty('volume', volume)
     engine.setProperty('voice', voice)
 
-    pdf = open(file, 'rb')
-    pdfReader = PyPDF2.PdfFileReader(pdf)
+    with open(file, 'rb') as pdf:
+        pdfReader = PyPDF2.PdfFileReader(pdf)
 
-    for num in range(max(start - 1, 1), end):
-        page = pdfReader.getPage(num)
-        text = page.extractText()
-        engine.say(text)
-        engine.runAndWait()
+        for num in range(max(start - 1, 1), end):
+            page = pdfReader.getPage(num)
+            text = page.extractText()
+            engine.say(text)
+            engine.runAndWait()
 
 
 if __name__ == "__main__":
@@ -185,7 +179,7 @@ if __name__ == "__main__":
     volume_scale = ttk.Scale(frame2, length=315, value=0.25)
     volume_scale.grid(row=0, column=3)
 
-    status_label = tk.Label(root, bg='#0a69dc', fg='#90EE90', width=50, font=('Arial', 18))
+    status_label = tk.Label(root, bg='#0a69dc', width=50, font=('Arial', 18))
     status_label.pack()
 
     frame3 = tk.Frame(root)
@@ -195,15 +189,11 @@ if __name__ == "__main__":
     play_lbl = tk.Label(frame3, image=play_image)
     play_lbl.grid(row=0, column=0, padx=5)
     play_lbl.bind('<Button-1>', play)
-    play_lbl.bind('<Return>', play)
-    play_lbl.bind('<KP_Enter>', play)
 
     stop_image = tk.PhotoImage(file='Stop.png')
     stop_lbl = tk.Label(frame3, image=stop_image)
 
     stop_lbl.bind('<Button-1>', stop)
-    stop_lbl.bind('<Return>', stop)
-    stop_lbl.bind('<KP_Enter>', stop)
     root.bind('<Key-Escape>', stop)
 
     root.mainloop()
