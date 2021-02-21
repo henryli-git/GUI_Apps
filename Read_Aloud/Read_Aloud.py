@@ -12,7 +12,7 @@ def about():
     top.title('About')
     top.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
 
-    read_aloud_label = tk.Label(top, text='Read Aloud', fg='#0a69dc', font=('arial', 20, 'bold'))
+    read_aloud_label = tk.Label(top, text='Read Aloud', fg='#0a69dc', font=('Arial', 20, 'bold'))
     read_aloud_label.pack(pady=(15, 20))
     version_label = tk.Label(top, text='Version 1.0.0', font=font)
     version_label.pack(pady=10)
