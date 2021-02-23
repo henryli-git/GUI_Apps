@@ -179,8 +179,8 @@ if __name__ == "__main__":
     volume_scale = ttk.Scale(frame2, length=315, value=0.25)
     volume_scale.grid(row=0, column=3)
 
-    status_label = tk.Label(root, bg='#0a69dc', width=50, font=('Arial', 18))
-    status_label.pack()
+    status_label = tk.Label(root, bg='#0a69dc', font=('Arial', 18))
+    status_label.pack(fill='x')
 
     frame3 = tk.Frame(root)
     frame3.pack(pady=10)
