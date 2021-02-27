@@ -7,6 +7,8 @@ https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchang
     *Powered by the https://ratesapi.io API 
   
 ## Prerequisites
+Update: Executable for this app is compatiable with Windows only.  Otherwise, the following requirements is needed.
+
 Python 3.6 or later is required.
 
 Required python modules:
