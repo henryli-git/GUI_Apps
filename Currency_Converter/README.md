@@ -14,6 +14,6 @@ Required python modules:
     *forex_python
     *tkinter
   
-Update: Executable for this app is compatible with Windows only and will look different from the screenshots
+(Update: Executable for this app is compatible with Windows only and will look different from the screenshots)
 ## Screenshot
 ![Image](Screenshot.png)
