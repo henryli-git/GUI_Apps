@@ -7,8 +7,8 @@ https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchang
     *Powered by the https://ratesapi.io API 
   
 ## Prerequisites
-      *Internet connection
-      *Python 3.6 or later
+     *Internet connection
+     *Python 3.6 or later
 
 Required python modules:
 
