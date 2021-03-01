@@ -7,16 +7,14 @@ https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchang
     *Powered by the https://ratesapi.io API 
   
 ## Prerequisites
+      *Internet connection
+      *Python 3.6 or later
+
 Required python modules:
 
     *forex_python
     *tkinter
-    
-Other requirements:
-    *Internet connection
-    *Python 3.6 or later
 
-  
 (Update: Executable for this app is compatible with Windows only and will look different from the screenshots)
 ## Screenshot
 ![Image](Screenshot.png)
