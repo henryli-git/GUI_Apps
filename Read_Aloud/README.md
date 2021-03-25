@@ -19,7 +19,7 @@ This application reads pdf files aloud.
 ## Prerequisites
     OSX compatible only.
 
-    Required python modules:
+    Required Python modules:
 
     *multiprocessiong (standard library)
     *os (standard library)
