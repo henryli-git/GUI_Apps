@@ -4,4 +4,4 @@ This repository contains python scripts for applications with a graphical user i
 
 ## Prerequisites
 
-Remember to check if you have the proper python modules installed before running each script.  
+Remember to check if you have the proper python modules installed if you are running directly from the script rather than the executable.
