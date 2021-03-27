@@ -1,5 +1,5 @@
 # Password Generator
-This app generate passwords that could be used as login information.
+This app generates passwords that could be used as login information.
 
 ## Features
     *Can choose password modifiers such as numbers and special characters
@@ -10,7 +10,7 @@ Executable is available for Windows - just download the executable and run the a
 
 If running from Password_Generator.py, Python 3.6 or later is required. 
   
-## Screenshot of App Running on Windows
+## Screenshots of App Running on Windows
 ![Image](Screenshot_1.png)
-<br/><br/>
+<br/><br/><br/>
 ![Image](Screenshot_2.png)

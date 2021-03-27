@@ -17,7 +17,6 @@ def pw_generator():
 
             password = ''
             x = 0
-
             while True:
                 if Var1.get() == 1:
                     password += chr(randint(65, 90))
@@ -68,7 +67,7 @@ x = screen_width / 2 - app_width / 2
 y = screen_height / 2 - app_height / 2
 root.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
 
-Lbl_frame_1 = tk.LabelFrame(root, text="Modifiers", labelanchor='n')
+Lbl_frame_1 = tk.LabelFrame(root, text='Modifiers', labelanchor='n')
 Lbl_frame_1.pack(pady=10)
 
 Var1 = tk.IntVar()
@@ -88,27 +87,27 @@ ChkBtn_3.grid(row=0, column=2, pady=5)
 ChkBt_4 = tk.Checkbutton(Lbl_frame_1, text='Special', width=7, variable=Var4)
 ChkBt_4.grid(row=0, column=3, pady=5)
 
-Lbl_frame_2 = tk.LabelFrame(root, text="Number of Characters", labelanchor='n')
+Lbl_frame_2 = tk.LabelFrame(root, text='Number of Characters', labelanchor='n')
 Lbl_frame_2.pack(pady=10)
 
-my_entry = tk.Entry(Lbl_frame_2, font=("Arial", 20), width=10)
+my_entry = tk.Entry(Lbl_frame_2, font=('Arial', 20), width=10)
 my_entry.pack(pady=20, padx=20)
 
-pw_entry = tk.Entry(root, text='', font=("Arial", 20), bd=0, bg="systembuttonface", justify='center', width=23)
+pw_entry = tk.Entry(root, text='', font=('Arial', 20), bd=0, bg='systembuttonface', justify='center', width=23)
 pw_entry.pack(pady=10)
 
 frame_1 = tk.Frame(root)
 frame_1.pack()
 
-generate_btn = tk.Button(frame_1, text="Generate Password", command=pw_generator)
+generate_btn = tk.Button(frame_1, text='Generate Password', command=pw_generator)
 generate_btn.grid(row=0, column=0, padx=10)
 
-copy_btn = tk.Button(frame_1, text="Copy", state="disabled", command=copy)
+copy_btn = tk.Button(frame_1, text='Copy', state='disabled', command=copy)
 copy_btn.grid(row=0, column=1, padx=10)
 
 status_label = tk.Label(root, text='', bd=1, relief='ridge', anchor='e', bg='#E9E9E9')
 status_label.pack(fill='x', side='bottom', ipady=2)
 
-root.bind("<Control-q>", quit)
+root.bind('<Control-q>', quit)
 
 root.mainloop()
