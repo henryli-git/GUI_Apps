@@ -12,4 +12,5 @@ If running from Password_Generator.py, Python 3.6 or later is required.
   
 ## Screenshot of App Running on Windows
 ![Image](Screenshot_1.png)
+<br/><br/><br/><br/>
 ![Image](Screenshot_2.png)
